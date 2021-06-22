@@ -1,0 +1,356 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* header */
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background: #FADC9C;
+    padding: 15px;
+    font-size: 1em;
+}
+
+nav img {
+    width: 100px;
+    height: 100%;
+}
+
+nav li {
+    display: inline;
+    list-style: none;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: 400;
+    color: #000;
+}
+
+nav a:hover {
+    border-bottom: 1px solid #F1592A;
+    color: #F1592A;
+}
+
+.intro {
+    background: url("../assets/images/cover.jpg");
+    width: 100%;
+    padding: 100px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.intro h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 3em;
+}
+
+.intro p {
+    font-size: 1.2em;
+}
+
+/* main */
+
+h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2em;
+    color: #F1592A;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background-color: #F1592A;
+    margin-top: 13px;
+    margin-left: 10px;
+}
+
+#about {
+    margin: 100px 50px;
+}
+
+#about section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#about article {
+    flex-basis: 50%;
+    margin-top: 2%;
+}
+
+#about p {
+    line-height: 2em;
+    text-align: justify;
+}
+
+#about img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
+#menu {
+    margin: 100px 50px;
+}
+
+#menu section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#menu .card {
+    flex-basis: 50%;
+    background: #FADC9C;
+    padding-right: 20px;
+    margin: 20px;
+}
+
+#menu .card:hover {
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#menu .card img {
+    max-width: 120px;
+    max-height: 120px;
+    float: left;
+    margin-right: 20px;
+}
+
+#menu .card .price {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -25px;
+}
+
+#menu .card h4 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.3em;
+}
+
+#testimony {
+    margin: 100px 50px;
+}
+
+#testimony h3 {
+    text-align: center;
+}
+
+#testimony section {
+    display: flex;
+    flex-direction: row;
+}
+
+#testimony .card {
+    flex-basis: 50%;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 40px;
+    text-align: center;
+    padding: 20px;
+}
+
+#testimony .card:hover {
+    background: #FADC9C;
+}
+
+#testimony .card img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+#testimony .card figcaption {
+    padding-top: 10px;
+    font-weight: 600;
+    color: #F1592A;
+}
+
+#reservation {
+    margin: 100px auto 0;
+    padding: 50px 50px;
+    background: #FADC9C;
+}
+
+#reservation h3 {
+    text-align: center;
+}
+
+#reserfation form {
+    background: transparent;
+    padding: 1rem;
+}
+
+#reservation form input {
+    display: block;
+    width: 50%;
+    padding: 12px 20px;
+    margin: 10px 0;
+    border: 1px solid #bbb;
+}
+
+#reservation form button {
+    background-color: #F1592A;
+    color: #ffffff;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0 ;
+}
+/* 
+aside {
+    margin: 100px 50px;
+    overflow: auto;
+    justify-items: center;
+}
+
+aside article img{
+    max-width: 200px;
+    max-height: 200px;
+    float: left;
+    margin-right: 20px;
+}
+
+aside article h2 {
+    padding-top: 50px;
+} */
+
+/* footer */
+
+footer {
+    background-color: #F1592A;
+    text-align: center;
+    margin-bottom: 0;
+    padding: 20px 0;
+    color: #ffffff;
+}
+
+@media screen and (max-width: 900px) {
+    nav {
+        flex-direction: column;
+        justify-content: end;
+        
+        font-size: 0.8em;
+    }
+
+    nav ul {
+        padding-left: 5px;
+    }
+
+    nav li {
+        margin-right: 10px;
+    }
+
+    .intro {
+        width: 100%;
+        padding: 50px;
+    }
+    
+    .intro h1 {
+        font-size: 2.5em;
+    }
+    
+    .intro p {
+        font-size: 1em;
+    }
+
+    #about {
+        margin: 80px 20px;
+    }
+    
+    #about section {
+        flex-direction: column;
+    }
+    
+    #about p {
+        line-height: 1.5em;
+        text-align: left;
+    }
+        
+    #menu {
+        margin: 80px 10px;
+    }
+
+    #menu section {
+        flex-direction: column;
+    }
+
+    #menu .card {
+        padding-right: 10px;
+        margin: 10px;
+    }
+
+    #menu .card img {
+        margin-right: 10px;
+    }
+
+    #menu .card .price {
+        flex-direction: column;
+        margin-bottom: -30px;
+    }
+
+    #menu .card h4 {
+        font-size: 1em;
+        margin-bottom: -20px;
+    }
+
+    #menu .card p {
+        font-size: .8em;
+        margin-bottom: 0;
+    }
+
+    #testimony {
+        margin: 80px 20px;
+    }
+        
+    #testimony section {
+        flex-direction: column;
+    }
+    
+    #testimony .card {
+        margin: 10px 0px;
+        padding: 0px;
+    }
+    
+    #testimony .card:hover {
+        background: #FADC9C;
+    }
+    
+    #reservation {
+        margin: 80px 0;
+        padding: 20px;
+    }
+
+    #reservation form input {
+        width: 100%;
+    }
+
+    aside {
+        margin: 80px 50px;
+    }
+
+    aside article img{
+        margin-bottom: 20px;
+    }
+
+    /* footer */
+
+    footer {
+        font-size: .8em;
+    }
+
+}
